@@ -1,8 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-import './Courses.css'
+import './Courses.css';
+import { fetchData } from '../../fetch';
 
 const Courses = () => {
+
+  fetchData('https://hundeschule.api.crm4.dynamics.com/api/data/v9.2/cre56_kurses?$filter=statecode eq 0')
+    .then(response => console.log(response));
+
   const courses = [];
   
   for (let i = 0; i < 1; i++) {
