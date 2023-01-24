@@ -14,6 +14,7 @@ import Logout from './pages/Logout';
 import { MsalProvider } from "@azure/msal-react";
 
 const App = ({ instance }) => {
+
   const { token, setToken } = useToken();
   
   if(!token) {
